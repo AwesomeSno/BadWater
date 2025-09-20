@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(220, 65%, 4%);
+  --foreground: hsl(220, 10%, 97%);
+  --card: hsl(220, 63%, 6%);
+  --card-foreground: hsl(220, 10%, 97%);
+  --popover: hsl(220, 63%, 6%);
+  --popover-foreground: hsl(220, 10%, 97%);
+  --primary: hsl(195, 100%, 50%);
+  --primary-foreground: hsl(220, 65%, 4%);
+  --secondary: hsl(220, 20%, 14%);
+  --secondary-foreground: hsl(220, 10%, 97%);
+  --muted: hsl(220, 20%, 8%);
+  --muted-foreground: hsl(220, 10%, 60%);
+  --accent: hsl(238, 75%, 65%);
+  --accent-foreground: hsl(220, 10%, 97%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(220, 20%, 18%);
+  --input: hsl(220, 20%, 14%);
+  --ring: hsl(195, 100%, 50%);
+  --chart-1: hsl(195, 100%, 50%);
+  --chart-2: hsl(238, 75%, 65%);
+  --chart-3: hsl(280, 87%, 65%);
+  --chart-4: hsl(320, 85%, 60%);
+  --chart-5: hsl(50, 85%, 60%);
+  --sidebar: hsl(220, 63%, 6%);
+  --sidebar-foreground: hsl(220, 10%, 97%);
+  --sidebar-primary: hsl(195, 100%, 50%);
+  --sidebar-primary-foreground: hsl(220, 65%, 4%);
+  --sidebar-accent: hsl(238, 75%, 65%);
+  --sidebar-accent-foreground: hsl(220, 10%, 97%);
+  --sidebar-border: hsl(220, 20%, 18%);
+  --sidebar-ring: hsl(195, 100%, 50%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'Orbitron', monospace;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(220, 65%, 4%);
+  --foreground: hsl(220, 10%, 97%);
+  --card: hsl(220, 63%, 6%);
+  --card-foreground: hsl(220, 10%, 97%);
+  --popover: hsl(220, 63%, 6%);
+  --popover-foreground: hsl(220, 10%, 97%);
+  --primary: hsl(195, 100%, 50%);
+  --primary-foreground: hsl(220, 65%, 4%);
+  --secondary: hsl(220, 20%, 14%);
+  --secondary-foreground: hsl(220, 10%, 97%);
+  --muted: hsl(220, 20%, 8%);
+  --muted-foreground: hsl(220, 10%, 60%);
+  --accent: hsl(238, 75%, 65%);
+  --accent-foreground: hsl(220, 10%, 97%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(220, 20%, 18%);
+  --input: hsl(220, 20%, 14%);
+  --ring: hsl(195, 100%, 50%);
+  --sidebar: hsl(220, 63%, 6%);
+  --sidebar-foreground: hsl(220, 10%, 97%);
+  --sidebar-primary: hsl(195, 100%, 50%);
+  --sidebar-primary-foreground: hsl(220, 65%, 4%);
+  --sidebar-accent: hsl(238, 75%, 65%);
+  --sidebar-accent-foreground: hsl(220, 10%, 97%);
+  --sidebar-border: hsl(220, 20%, 18%);
+  --sidebar-ring: hsl(195, 100%, 50%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .font-futuristic {
+    font-family: 'Orbitron', monospace;
+  }
+  
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, #00d4ff 0%, #6366f1 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, rgba(0, 212, 255, 0.05) 50%, rgba(10, 10, 10, 0.8) 100%);
+  }
+  
+  .floating-nav {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .project-card {
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
