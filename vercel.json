@@ -15,3 +15,17 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build"
 }
+{
+  "functions": {
+    "server/index.ts": {
+      "runtime": "edge",
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "build": {
+    "env": {
+      "VERCEL_PUBLIC_DATABASE_URL": "@vercel-public-database-url"
+    }
+  }
+}
