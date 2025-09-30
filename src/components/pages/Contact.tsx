@@ -31,19 +31,19 @@ export const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'contact@badwater.tech',
-      link: 'mailto:contact@badwater.tech'
+      details: 'contact@badwater.site',
+      link: 'mailto:contact@badwater.site'
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      details: '+91 8589820089',
+      link: 'tel:+918589820089'
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Silicon Valley, CA\nTech Innovation Hub',
+      details: 'Trivandrum, Kerala\nBadWater',
       link: '#'
     },
     {
@@ -55,7 +55,7 @@ export const Contact: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/AwesomeSno/', label: 'GitHub' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Twitter, href: '#', label: 'Twitter' },
   ];
