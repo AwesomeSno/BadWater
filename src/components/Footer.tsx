@@ -4,9 +4,9 @@ import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/AwesomeSno/', label: 'GitHub' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:contact@badwater.tech', label: 'Email' },
+    { icon: Mail, href: 'mailto:contact@badwater.site', label: 'Email' },
   ];
 
   const quickLinks = [
